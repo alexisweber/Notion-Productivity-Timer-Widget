@@ -18,10 +18,17 @@ html, body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
+body {
+  display: grid;
+   /* centers horizontally + vertically */
+  place-items: center;
+}
+
 /* widget */
 .widget {
-  width: min(280px, 92vw);
+  width: min(100%, 280px);   /* fill iframe width up to a max */
   aspect-ratio: 1 / 1;
+  margin: 0 auto; 
   background: var(--bg);
   border-radius: var(--corner);
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -33,7 +40,10 @@ html, body {
   position: relative;
 }
 
-/* toggles */
+.widget { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Toggles */
 .toggles {
   display: flex;
   justify-content: center;
@@ -60,7 +70,7 @@ html, body {
   transform: translateY(-1px);
 }
 
-/* center area */
+/* Center area */
 .center-area {
   display: grid;
   grid-template-columns: 34px 1fr 34px;
@@ -181,7 +191,7 @@ svg {
   line-height: 1;
 }
 
-/* settings modal overlay */
+/* Modal overlay */
 .modal-overlay {
   position: absolute;
   inset: 0;
@@ -213,7 +223,7 @@ svg {
   margin-bottom: 10px;
 }
 
-/* settings modal close button */
+/* close button */
 .modal-close {
   position: absolute;
   top: 8px;
@@ -234,7 +244,7 @@ svg {
   transform: translateY(-1px);
 }
 
-/* swatches color themes */
+/* swatches */
 .swatch-row,
 .sound-row {
   display: flex;
@@ -259,7 +269,7 @@ svg {
   outline-offset: 2px;
 }
 
-/* color theme swatches */
+/* color swatches */
 .swatch-pink  { background: #ffd6e7; }
 .swatch-blue  { background: #cfe8ff; }
 .swatch-yellow{ background: #fff2b8; }
@@ -294,8 +304,7 @@ svg {
 .sound-icon {
   width: 16px;
   height: 16px;
-  /* makes outline light based on theme */
-  color: var(--textLight); 
+  color: var(--textLight);   /* makes outline light based on theme */
   display: block;
 }
 
@@ -303,20 +312,21 @@ svg {
   font-size: 14px;
   line-height: 1;
 }
-
-/* inline svg will inherit color theme */
+/* Any inline SVG that should inherit theme color */
 .icon-svg {
   width: 16px;
   height: 16px;
   display: block;
+
+  /* This makes currentColor work */
   color: var(--textLight);
 
-  /* inherit fill and stroke color */
+  /* Force fills/strokes to inherit */
   fill: currentColor;
   stroke: none;
 }
 
-/* compact */
+/* Compact mode */
 .widget {
   width: min(210px, 77vw);
   padding: 10px;
@@ -350,4 +360,3 @@ svg {
 .controls {
   gap: 7px;
 }
-
