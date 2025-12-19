@@ -111,9 +111,9 @@ body {
   font-weight: 800;
   letter-spacing: 0.5px;
   text-align: center;
-  padding-top: 2px;
+  padding-top: 0;
 }
-.time-text .big { font-size: 24px; }
+.time-text .big { font-size: 20px; }
 
 svg {
   width: 100%;
@@ -326,29 +326,29 @@ svg {
   stroke: none;
 }
 
-/* Compact mode */
+/* compact - can remove if you want it larger */
 .widget {
-  width: min(210px, 77vw);
+  width: min(200px, 73vw);
   padding: 10px;
 }
 
 svg {
-  max-width: 130px;
+  max-width: 125px;
 }
 
 .time-text .big {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .center-area {
-  grid-template-columns: 25px 1fr 25px;
-  gap: 7px;
-  padding: 5px 2px 0;
+  grid-template-columns: 23px 1fr 23px;
+  gap: 6px;
+  padding: 4px 2px 0;
 }
 
 .ctrl {
-  width: 26px;
-  height: 26px;
+  width: 23px;
+  height: 23px;
 }
 
 .side-btn {
@@ -358,5 +358,5 @@ svg {
 }
 
 .controls {
-  gap: 7px;
+  gap: 6px;
 }
