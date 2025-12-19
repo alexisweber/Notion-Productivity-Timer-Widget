@@ -174,8 +174,8 @@
   let raf = null;
   let lastTime = null;
 
-  // ring geometry (matches your SVG r=56)
-  const R = 56;
+  // ring geometry (matches your SVG r=70)
+  const R = 65;
   const CIRC = 2 * Math.PI * R;
   ringProgress.style.strokeDasharray = `${CIRC} ${CIRC}`;
   ringProgress.style.strokeDashoffset = "0";
