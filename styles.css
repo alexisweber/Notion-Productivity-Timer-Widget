@@ -318,36 +318,36 @@ svg {
 
 /* compact */
 .widget {
-  width: min(240px, 88vw);
-  padding: 12px;
+  width: min(210px, 77vw);
+  padding: 10px;
 }
 
 svg {
-  max-width: 150px;
+  max-width: 130px;
 }
 
 .time-text .big {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .center-area {
-  grid-template-columns: 28px 1fr 28px;
-  gap: 8px;
-  padding: 6px 2px 0;
+  grid-template-columns: 25px 1fr 25px;
+  gap: 7px;
+  padding: 5px 2px 0;
 }
 
 .ctrl {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
 }
 
 .side-btn {
-  width: 26px;
-  height: 26px;
-  font-size: 16px;
+  width: 23px;
+  height: 23px;
+  font-size: 14px;
 }
 
 .controls {
-  gap: 8px;
+  gap: 7px;
 }
 
